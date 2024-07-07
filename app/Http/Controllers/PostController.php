@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function showAll()
     {
-        return PostResource::collection(Post::where('is_public',true)->get());
+        return PostResource::collection(Post::withCount('likes')->where('is_public',true)->get());
        
     }
 
