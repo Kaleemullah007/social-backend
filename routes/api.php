@@ -15,6 +15,7 @@ Route::post('varification', [AuthController::class, 'varification'])->name('vari
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('posts/search', [PostController::class, 'searchPost'])->name('posts.search');      
+    Route::post('posts/like', [PostController::class, 'likes'])->name('posts.like');      
     Route::apiResource('posts',PostController::class);    
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
