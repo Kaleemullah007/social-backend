@@ -126,7 +126,7 @@ class PostController extends Controller
 }else{
     $message = 'Logged in first to like or unlike post';
 }
-        return response()->json(['error'=>true,'message'=>$message.auth()->id()]);
+        return response()->json(['error'=>true,'message'=>$message]);
 
 
     }
